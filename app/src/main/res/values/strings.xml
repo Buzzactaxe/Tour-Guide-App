@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">Tour Guide (Bari)</string>
+    
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <!-- navigation menu list* -->
+    <string name="nav_1">Restaurants</string>
+    <string name="nav_2">Food</string>
+    <string name="nav_3">Attractions</string>
+    <string name="nav_4">Night Life</string>
+
+    <!-- Restaurant Names -->
+    <string name="rino">La Uascezze</string>
+    <string name="gambero">Il Gambero</string>
+    <string name="travi">Osteria Le Travi</string>
+    <string name="arpie">Osteria Le Arpie</string>
+
+    <!-- Food Names -->
+    <string name="patate_riso_cozze">Patate Riso e Cozze</string>
+    <string name="fave_cicorie">Fave e Cicoria</string>
+    <string name="orecchiette_rapa">Orecchiette alle Cime di Rapa</string>
+    <string name="focaccia">Focaccia di Bari</string>
+    <string name="panzerotti">Panzerotti Fritti</string>
+
+    <!-- Description Restaurants -->
+    <string name="la_uascezze">La Uascezze offers its customers a wide selection of typical products from the city of Bari in which they combine the best taste and genuineness. it is a MUST if you are in the city.</string>
+    <string name="il_gambero">A place where you can taste good fish dishes, but certainly good food, spaghetti with seafood, grilled vegetables, mixed fried, and much more.</string>
+    <string name="le_travi">If the love for food brings you to bari and you want to taste a bit of this old town’s wonders, make sure you visit this place. It runs in a very old building, that kept it’s charm and architecture.</string>
+    <string name="le_arpie">Authentic and historical tavern in the heart of Bari Vecchia, accessed by an arch, inside a narrow courtyard..table outdoors in good weather, friendly and simple service, excellent cuisine of Bari, Without great pretensions, you spend a nice evening without spending crazy figures.</string>
+
+    <!-- Description Food -->
+    <string name="patate_cozze_description">A dish of both land and sea, the "tiella" barese inebriates the streets around the Basilica of San Nicola for over four centuries. every Bari family prepares it differently: who puts more potatoes, more rice, sometimes whole tomatoes, some add salsa and who, again, neither of the above and who, on the other hand, also add courgette.</string>
+    <string name="fave_cicoria_description">Fave e cicoria (fava beans and chicory) is a popular dish in Puglia, the heel of Italy’s boot. It takes inspiration from Egyptian bean purées across the Mediterranean, and uses a few quality ingredients in similar ways. Bitter greens balance the warm, hearty ﬂavor of the bean puree perfectly in this simple 4-ingredient dish.</string>
+    <string name="orecchiette_cime_rapa_description">Puglia’s sun-soaked landscape in southern Italy is celebrated for its signature dish, orecchiette with broccoli rabe. The pasta’s “little ears,” as “orecchiette” translates, are a homemade pasta made exclusively in southern italy.</string>
+    <string name="focaccia_description">Focaccia Barese is a street food with very light dough, different than pizza. It’s topped with Olio Terra di Bari, oven baked black olives and tomatoes. A speciality you must try without  . </string>
+    <string name="panzerotti_description">Strictly fried and strictly accompanied by a cold beer: praise to the panzerotto. A must, a symbol, a tradition. Bari without him would not be the same and the people without the long-awaited "panzerottata" would have one less reason to look forward to Christmas Eve.</string>
+</resources>
