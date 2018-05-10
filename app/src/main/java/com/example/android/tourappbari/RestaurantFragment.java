@@ -4,6 +4,8 @@ package com.example.android.tourappbari;
 import android.content.Context;
 import android.os.Bundle;
 
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,13 +13,16 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
-import com.example.android.tourappbari.Item;
-import com.example.android.tourappbari.ItemAdapter;
-import com.example.android.tourappbari.R;
-
 import java.util.ArrayList;
 
 public class RestaurantFragment extends Fragment {
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
+        getActivity().setTitle(R.string.nav_1);
+    }
 
     @Override
     public void onStop() {
@@ -29,7 +34,8 @@ public class RestaurantFragment extends Fragment {
 
 
     @Override
-    public View onCreateView( LayoutInflater inflater,  ViewGroup container,  Bundle savedInstanceState) {
+    public View onCreateView( LayoutInflater inflater,  ViewGroup container,
+                              Bundle savedInstanceState) {
 
         //Root View
         View rootView = inflater.inflate(R.layout.descript_list, container, false);
@@ -51,6 +57,7 @@ public class RestaurantFragment extends Fragment {
         listView.setAdapter(adapter);
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Item item = items.get(position);

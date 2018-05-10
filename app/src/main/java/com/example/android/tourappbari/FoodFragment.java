@@ -3,6 +3,8 @@ package com.example.android.tourappbari;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,6 +17,13 @@ import java.util.ArrayList;
 public class FoodFragment extends Fragment {
 
     @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
+        getActivity().setTitle(R.string.nav_2);
+    }
+
+    @Override
     public void onStop() {
         super.onStop();
     }
@@ -24,7 +33,8 @@ public class FoodFragment extends Fragment {
 
 
     @Override
-    public View onCreateView( LayoutInflater inflater,  ViewGroup container,  Bundle savedInstanceState) {
+    public View onCreateView( LayoutInflater inflater,  ViewGroup container,
+                              Bundle savedInstanceState) {
 
         //Root View
         View rootView = inflater.inflate(R.layout.descript_list, container, false);
@@ -34,10 +44,10 @@ public class FoodFragment extends Fragment {
 
         //Create an ArrayList of Items
         final ArrayList<Item> items = new ArrayList<Item>();
-        items.add(new Item(context.getString(R.string.patate_riso_cozze), context.getString(R.string.patate_cozze_description),R.drawable.riso_patate_cozze));
-        items.add(new Item(context.getString(R.string.fave_cicorie), context.getString(R.string.fave_cicoria_description), R.drawable.fave_cicorie));
+        items.add(new Item(context.getString(R.string.patate_riso_cozze), context.getString(R.string.patate_cozze_description), R.drawable.riso_patate_cozze));
+        items.add(new Item(context.getString(R.string.fave_cicorie), context.getString(R.string.fave_cicoria_description),R.drawable.fave_cicorie));
         items.add(new Item(context.getString(R.string.panzerotti), context.getString(R.string.panzerotti_description), R.drawable.panzerotti));
-        items.add(new Item(context.getString(R.string.focaccia), context.getString(R.string.focaccia_description), R.drawable.focaccia));
+        items.add(new Item(context.getString(R.string.focaccia), context.getString(R.string.focaccia_description),R.drawable.focaccia));
 
         ItemAdapter adapter = new ItemAdapter(context, items, R.color.colorFood);
 
@@ -46,6 +56,7 @@ public class FoodFragment extends Fragment {
         listView.setAdapter(adapter);
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Item item = items.get(position);
@@ -53,7 +64,7 @@ public class FoodFragment extends Fragment {
                 //Description
                 View description = view.findViewById(R.id.description);
 
-                ExpandAnimation expAmation = new ExpandAnimation(description, 450);
+                ExpandAnimation expAmation = new ExpandAnimation(description, 500);
 
                 //Start Animation on description
                 description.startAnimation(expAmation);

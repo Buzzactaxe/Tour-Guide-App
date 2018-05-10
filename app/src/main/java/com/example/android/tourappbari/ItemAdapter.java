@@ -55,13 +55,8 @@ public class ItemAdapter extends ArrayAdapter<Item> {
         TextView descriptionTextView = (TextView) listItemView.findViewById(R.id.description);
         // Get the name from the currentItem object and set this text on
         // the name TextView.
-        nameTextView.setText(currentItem.getmItemName());
+        descriptionTextView.setText(currentItem.getItemDescription());
 
-        // Find the TextView in the list_item.xml layout with the ID of the description text view.
-        TextView descriptionView = (TextView) listItemView.findViewById(R.id.description);
-        // Get the description from the currentElement object and set this text on
-        // the description TextView.
-        descriptionView.setText(currentItem.getItemDescription());
 
         //Find textView in the ListItem.xml with ID of textView description
         ImageView imageView = (ImageView) listItemView.findViewById(R.id.image);

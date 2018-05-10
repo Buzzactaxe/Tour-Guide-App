@@ -3,6 +3,8 @@ package com.example.android.tourappbari;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,6 +15,13 @@ import android.widget.ListView;
 import java.util.ArrayList;
 
 public class AttractionsFragment extends Fragment {
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
+        getActivity().setTitle(R.string.nav_3);
+    }
 
     @Override
     public void onStop() {
@@ -34,10 +43,10 @@ public class AttractionsFragment extends Fragment {
 
         //Create an ArrayList of Items
         final ArrayList<Item> items = new ArrayList<Item>();
-        items.add(new Item(context.getString(R.string.rino), context.getString(R.string.il_gambero)));
-        items.add(new Item(context.getString(R.string.travi), context.getString(R.string.le_travi)));
-        items.add(new Item(context.getString(R.string.gambero), context.getString(R.string.il_gambero)));
-        items.add(new Item(context.getString(R.string.arpie), context.getString(R.string.le_arpie)));
+        items.add(new Item(context.getString(R.string.san_nicola), context.getString(R.string.san_nicola_descriprion),R.drawable.s_nicola));
+        items.add(new Item(context.getString(R.string.ferris_wheel), context.getString(R.string.ferris_wheel_description),R.drawable.ruota));
+        items.add(new Item(context.getString(R.string.petruzzelli), context.getString(R.string.petruzzelli_description),R.drawable.petruzzelli));
+        items.add(new Item(context.getString(R.string.viasparano), context.getString(R.string.viasparano_description),R.drawable.viasparano));
 
         ItemAdapter adapter = new ItemAdapter(context, items, R.color.colorAttractions);
 
@@ -53,7 +62,7 @@ public class AttractionsFragment extends Fragment {
                 //Description
                 View description = view.findViewById(R.id.description);
 
-                ExpandAnimation expAmation = new ExpandAnimation(description, 450);
+                ExpandAnimation expAmation = new ExpandAnimation(description, 500);
 
                 //Start Animation on description
                 description.startAnimation(expAmation);
